@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="nine columns">
+		<div id="archives">
+			<%= render :partial => 'post', :collection => @posts%>
+		</div>
+		
+		<div class="row">
+			<div class="eleven offset-by-one">
+				<%= will_paginate @posts %>
+			</div>
+		</div>
+	</div>
+	<div class="three columns">
+		<%= render :partial => 'right'%>
+	</div>
+</div>

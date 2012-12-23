@@ -1,0 +1,35 @@
+// Place all the styles related to the archives controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#archives {
+
+		.columns {padding:0px;}
+
+		.top-dotted {
+			border-bottom:1px dotted #e1e1e1;
+			height:50px;
+			padding-top:10px;
+		}
+		
+		.year-dotted {padding-top:4px;}
+		.row {padding-bottom:5px;}
+		
+		
+		h1 {
+			font-weight: 500;
+			font-size:2em;
+			margin:0px;
+			padding:0px;
+			line-height:.8em
+		}
+		
+		.month, .day, .year {
+			color:#6F6F6F;
+			padding-top:2px;
+		}
+		
+		.year {
+			font-size:1.2em;
+		}
+}

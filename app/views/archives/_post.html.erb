@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="one columns year-dotted">
+		<% if not_printed?(post.created_at.strftime('%Y'))%><span class="year"><%=post.created_at.strftime('%Y')%></span> <% end %> 
+	</div>
+	<div class="one columns top-dotted">
+		<span class="month"><%=post.created_at.strftime('%b')%></span> 
+		<span class="day"><%=post.created_at.strftime('%d')%></span>
+	</div>
+	<div class="ten columns top-dotted">
+		<h1><%= link_to post.title, post_path(post) %></h1>
+	</div>
+</div>

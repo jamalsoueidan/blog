@@ -1,0 +1,378 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   body.active_admin {
+//      .status_tag { background: #6090DB; }
+//   }
+//
+// Notice that Active Admin CSS rules are nested within a
+// 'body.active_admin' selector to prevent conflicts with
+// other pages in the app. It is best to wrap your changes in a 
+// namespace so they are properly recognized. You have options
+// if you e.g. want different styles for different namespaces:
+//
+// .active_admin       applies to any Active Admin namespace
+// .admin_namespace    applies to the admin namespace (eg: /admin)
+// .other_namespace    applies to a custom namespace named other (eg: /other)
+
+
+.wysiwyg-font-size-smaller {
+  font-size: smaller;
+}
+
+.wysiwyg-font-size-larger {
+  font-size: larger;
+}
+
+.wysiwyg-font-size-xx-large {
+  font-size: xx-large;
+}
+
+.wysiwyg-font-size-x-large {
+  font-size: x-large;
+}
+
+.wysiwyg-font-size-large {
+  font-size: large;
+}
+
+.wysiwyg-font-size-medium {
+  font-size: medium;
+}
+
+.wysiwyg-font-size-small {
+  font-size: small;
+}
+
+.wysiwyg-font-size-x-small {
+  font-size: x-small;
+}
+
+.wysiwyg-font-size-xx-small {
+  font-size: xx-small;
+}
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+.wysiwyg-text-align-right {
+  text-align: right;
+}
+
+.wysiwyg-text-align-center {
+  text-align: center;
+}
+
+.wysiwyg-text-align-left {
+  text-align: left;
+}
+
+.wysiwyg-float-left {
+  float: left;
+  margin: 0 8px 8px 0;
+}
+
+.wysiwyg-float-right {
+  float: right;
+  margin: 0 0 8px 8px;
+}
+
+.wysiwyg-clear-right {
+  clear: right;
+}
+
+.wysiwyg-clear-left {
+  clear: left;
+}
+
+
+.active_admin_editor {
+    width: 76%;
+    float: left;
+
+    textarea {
+        width: 100%;
+        font-family: Georgia;
+        font-size: 1.3em;
+        height: 700px;
+        line-height: 1.5em;
+    }
+
+    .active_admin_editor_toolbar {
+        position: relative;
+        margin-bottom: 8px;
+
+        /* Formatting Buttons */
+        [data-wysihtml5-command],
+        [data-wysihtml5-action="change_view"] {
+          text-decoration: none;
+          background: #fff;
+          color: #000;
+          padding: 4px 6px;
+          margin: 0 2px 2px 0;
+          border: 1px solid #C9D0D6;
+          border-radius: 4px;
+
+          &.wysihtml5-command-active {
+            @include gradient(#eee, #f9f9f9);
+          }
+        }
+
+        &.wysihtml5-commands-disabled [data-wysihtml5-command] {
+          opacity: 0.5;
+        }
+
+        &.wysihtml5-commands-disabled [data-wysihtml5-action="change_view"] {
+          @include gradient(#eee, #f9f9f9);
+        }
+
+        [data-wysihtml5-command="bold"] {
+          font-weight: bold;
+        }
+
+        [data-wysihtml5-command="italic"] {
+          font-style: italic;
+        }
+
+        [data-wysihtml5-command="createLink"] span {
+          border-bottom: 1px solid #38678B;
+        }
+
+        /* Dialog Window */
+        [data-wysihtml5-dialog] {
+            position: absolute;
+            top: 35px;
+            left: 10px;
+            width: 600px;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #c9d0d6;
+
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+
+            -moz-box-shadow: 0 0 5px #ccc;
+            -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+
+            label {
+                display: block;
+                margin: 10px 0;
+
+                & + label {
+                  clear: both;
+                }
+            }
+
+            input {
+                width: 400px;
+                border: 1px solid #c9d0d6;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                font-size: 0.95em;
+                font-family: Helvetica, Arial, sans-serif;
+                outline: none;
+                padding: 8px 10px 7px;
+            }
+
+            .asset_scale_selection {
+              clear: both;
+              @include clearfix;
+
+              label {
+                clear: none;
+                display: block;
+                float: left;
+                width: auto;
+                margin-right: 20px;
+
+                input {
+                  width: auto;
+                }
+              }
+
+              & + label {
+                clear: both;
+              }
+            }
+
+            #asset_uploader {
+              margin-top: 27px;
+              float: right;
+            }
+
+            .assets_container {
+              clear: both;
+              @include clearfix;
+              margin: 10px 0;
+              padding: 20px 0;
+
+              .asset {
+                float: left;
+                margin: 5px;
+                line-height: 0;
+                width: 110px;
+                height: 126px;
+                text-align: center;
+
+                &.active {
+                  img {
+                    border-color: #999;
+                  }
+                }
+
+                img {
+                  cursor: pointer;
+                  border: 3px solid #ddd;
+                }
+              }
+
+              a.upload {
+                display: block;
+                float: right;
+                margin-right: 20px;
+              }
+
+              .page_navigation {
+                clear: both;
+                float: right;
+
+                & > span {
+                  display: inline-block;
+                  margin: 0 3px;
+
+                  &.active {
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+
+            .action-group {
+                padding-top: 20px;
+                clear: both;
+            }
+
+            [data-wysihtml5-dialog-action] {
+                cursor: pointer;
+            }
+        }
+
+        .button.quicksave {
+            float: right;
+            margin-top: -5px;
+            margin-right: -20px;
+            position: relative;
+            top: -5px;
+        }
+    }
+}
+
+// AJAX Uploader
+.qq-uploader { position:relative; width: 100%; clear: both;}
+
+.qq-upload-button {
+    display:block; /* or inline-block */
+    width: 105px; padding: 7px 0; text-align:center;    
+    background:#880000; border-bottom:1px solid #ddd;color:#fff;
+}
+.qq-upload-button-hover {background:#cc0000;}
+.qq-upload-button-focus {outline:1px dotted black;}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background:#FF9797; text-align:center; 
+}
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+.qq-upload-drop-area-active {background:#FF7171;}
+
+.qq-upload-list {display: none;margin:15px 35px; padding:0; list-style:disc;}
+.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url("loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}
