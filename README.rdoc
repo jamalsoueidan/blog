@@ -1,3 +1,9 @@
 Personal Blog
 
 http://jamal.soueidan.com
+
+
+Todo:
+* sitemap for google seo
+* 
+
