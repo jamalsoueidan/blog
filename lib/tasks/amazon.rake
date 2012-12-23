@@ -39,7 +39,7 @@ namespace :amazon do
     path = File.join(Rails.root, filename)
 
     command = ["mysqldump -u #{environment['username']}"]
-    command << "-p #{environment['password']}" unless environment['password'].nil?
+    command << "--password=#{environment['password']}" unless environment['password'].nil?
     command << "#{environment['database']} > " + path
     
     system command.join(' ')
