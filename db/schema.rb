@@ -45,11 +45,12 @@ ActiveRecord::Schema.define(:version => 20121223141211) do
   end
 
   create_table "projects", :force => true do |t|
-    t.string "title"
-    t.string "language"
-    t.string "client"
-    t.string "link"
-    t.text   "description"
+    t.string   "title"
+    t.string   "language"
+    t.string   "client"
+    t.string   "link"
+    t.text     "description"
+    t.datetime "created_at"
   end
 
   create_table "uploads", :force => true do |t|
