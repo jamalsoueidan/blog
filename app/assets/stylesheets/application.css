@@ -7,7 +7,7 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- 
+
  *= require_self
  *= require foundation_and_overrides
  *= require_tree .
@@ -38,4 +38,12 @@ a img { border: none; }
 .top p {
 	font-size:2em;
 	margin:0px;
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #FFF;
+  padding:20px;
+  margin-top:20px;
 }

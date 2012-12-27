@@ -48,6 +48,3 @@ namespace :amazon do
     system 'rm ' + filename
   end
 end
-
-
-
