@@ -1,11 +1,23 @@
 <div class="row">
 	<div class="nine columns">
-		<< <%= link_to "Back", :back %>
-		
 		<div class="post">
+      << <%= link_to "Back", :back %>
 			<h1><%=@project.title%></h1>
+      <p style="line-height:24px">
+        <strong>Languge:</strong> <%=@project.language%><br>
+        <strong>Date:</strong> <%=@project.created_at%><br>
+        <% if @project.link %>
+          <strong>Link:</strong> <%=link_to @project.link, @project.link, :target => '_blank'%>
+        <% end %>
+      </p>
 			<p><%=raw @project.description%></p>
 		</div>
+
+    <ul id="uploads" class="block-grid six-up" data-clearing>
+      <% @project.uploads.each do |upload|%>
+        <li class="upload"><%= link_to image_tag(upload.avatar(:small)), upload.avatar(:large)%></li>
+      <% end %>
+    </ul>
 	</div>
 	<div class="three columns">
 

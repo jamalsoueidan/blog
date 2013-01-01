@@ -29,6 +29,7 @@
 </head>
 <body>
 
+<header class="fixed contain-to-grid">
 	<nav class="top-bar">
 		<ul>
 			<li class="name"><h1><a href="/">Jamal Soueidan</a></h1></li>
@@ -46,20 +47,24 @@
 			<li><%= link_to "About", about_me_path%></li>
 		</ul>
 	</nav>
+</header>
 
-
-	<div class="top">
-		<h1><%=@title%></h1>
-		<p><%=@body%></p>
+<div class="top">
+  <div class="row">
+    <div class="twelve columns">
+      <h1><%=@title%></h1>
+      <p><%=@body%></p>
     </div>
+  </div>
+</div>
 
-	<div id="content">
-		<%= yield %>
-	</div>
+<div id="content">
+	<%= yield %>
+</div>
 
-  <footer>
-    Copyright 2012 Jamal Soueidan
-  </footer>
+<footer>
+  Copyright 2012 Jamal Soueidan
+</footer>
 
 <script type="text/javascript">
 

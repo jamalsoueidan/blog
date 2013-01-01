@@ -1,6 +1,8 @@
 <li>
 	<h1><%= link_to project.title, project_path(project) %></h1>
 	<span class="date">Developed <%=distance_of_time_in_words(project.created_at, Time.now)%> ago</span>
-	<span class="thumb"><%= image_tag '/uploads/fullsize/' + project.thumb, :style => "height:150px;" %></span>
+  <% unless project.uploads.empty? %>
+	<span class="thumb"><%= image_tag project.uploads.first.avatar(:small), :style => "height:150px;" %></span>
+  <% end %>
 	<span class="language"><%=project.language%></span>
 </li>
