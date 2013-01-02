@@ -6,7 +6,7 @@ ActiveAdmin.register Project do
        f.input :client
        f.input :link
        f.input :description, :as => :html_editor, :input_html => {:style => "height:200px;"}
-       f.input :developed_at
+       f.input :developed_at, :start_year => 2000
      end
 
      f.buttons

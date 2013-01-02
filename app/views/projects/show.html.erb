@@ -6,7 +6,7 @@
       <p>
         <strong>Languge:</strong> <%=@project.language%><br>
         <strong>Developed:</strong> <%=@project.developed_date%><br>
-        <% if @project.link %>
+        <% unless @project.link.empty? %>
           <strong>Link:</strong> <%=link_to @project.link, @project.link, :target => '_blank'%>
         <% end %>
       </p>
@@ -14,9 +14,9 @@
 			<%=simple_format @project.description%>
 		</div>
 
-    <ul id="uploads" class="block-grid six-up" data-clearing>
+    <ul id="uploads" class="block-grid three-up" data-clearing>
       <% @project.uploads.each do |upload|%>
-        <li class="upload"><%= link_to image_tag(upload.avatar(:medium)), upload.avatar(:original)%></li>
+        <li class="upload"><%= link_to image_tag(upload.avatar(:medium), :style => "height:150px"), upload.avatar(:original)%></li>
       <% end %>
     </ul>
 	</div>

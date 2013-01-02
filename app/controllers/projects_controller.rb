@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.order('created_at desc').paginate(:page => params[:page], :per_page => 30)
+    @projects = Project.order('developed_at desc').paginate(:page => params[:page], :per_page => 12)
   end
 
   def show
@@ -11,6 +11,6 @@ class ProjectsController < ApplicationController
   private
     def set_title
       @title = "Projects"
-      @body = "Some of the projects I developed "
+      @body = "The list is NOT complete!"
     end
 end
